@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "Env: ${{ inputs.pokemon_id}}"
+          echo "Env: ${{github.events.inputs.pokemon_id}}"
