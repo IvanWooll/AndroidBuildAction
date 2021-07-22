@@ -6,11 +6,8 @@ inputs:
     description: 'number of the pokemon in the pokedex'
     required: true
     default: 1
-outputs:
-  pokemon_name:
-    description: 'Name des Pokemons'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
+
+runs-on: ubuntu-latest
+  steps:
     - run: |
-      echo "${{inputs.pokemon_id}}"
+      echo "Env: ${{ inputs.task_name}}"
