@@ -8,8 +8,8 @@ inputs:
     default: 1
 
 jobs:
-  build:
+  printInputs:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "Env: ${{github.events.inputs.pokemon_id}}"
+    - run: |
+        echo "Log level: ${{ github.event.inputs.pokemon_id }}"
