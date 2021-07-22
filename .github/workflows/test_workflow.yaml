@@ -1,16 +1,27 @@
-on: [push]
+name: use my action
+on: push
 
 jobs:
-  custom_test:
-    runs-on: ubuntu-latest
-    name: We test it locally with act
-    steps:
-      - name: Get Pokemon name
-        # uses: philschmid/blog-custom-github-action@master
-      - uses: actions/checkout@v1
-        uses: ./.github/actions/action
-        id: pokemon
-        with:
-          pokemon_id: 150
-      - name: Get the pokemon
-        run: echo "${{ steps.pokemon.outputs.pokemon_name }} attack"
+  my_first_job:
+     runs-on: ubuntu-latest
+     steps: 
+     - uses: actions/checkout@v1
+     - name: My first step
+       uses: ./.github/actions/action
+
+# on: [push]
+
+# jobs:
+#   custom_test:
+#     runs-on: ubuntu-latest
+#     name: We test it locally with act
+#     steps:
+#       - name: Get Pokemon name
+#         # uses: philschmid/blog-custom-github-action@master
+#       - uses: actions/checkout@v1
+#         uses: ./.github/actions/action
+#         id: pokemon
+#         with:
+#           pokemon_id: 150
+#       - name: Get the pokemon
+#         run: echo "${{ steps.pokemon.outputs.pokemon_name }} attack"
