@@ -1,3 +1,9 @@
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+
 - name: Get Pokemon name
   uses: ./ # Uses an action in the root directory
   id: pokemon
