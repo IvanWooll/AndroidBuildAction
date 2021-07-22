@@ -6,7 +6,8 @@ jobs:
     name: We test it locally with act
     steps:
       - name: Get Pokemon name
-        uses: philschmid/blog-custom-github-action@master
+        # uses: philschmid/blog-custom-github-action@master
+        uses: IvanWooll/AndroidBuildAction@master
         id: pokemon
         with:
           pokemon_id: 150
