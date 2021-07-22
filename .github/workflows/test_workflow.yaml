@@ -7,7 +7,8 @@ jobs:
     steps:
       - name: Get Pokemon name
         # uses: philschmid/blog-custom-github-action@master
-        uses: action.yaml
+        - uses: actions/checkout@v1
+       uses: ./.github/actions/action
         id: pokemon
         with:
           pokemon_id: 150
