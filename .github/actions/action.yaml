@@ -11,5 +11,4 @@ jobs:
   printInputs:
     runs-on: ubuntu-latest
     steps:
-    - run: |
-        echo "Log level: ${{ inputs.pokemon_id }}"
+    - run: echo "Log level: ${{ inputs.pokemon_id }}"
