@@ -9,7 +9,7 @@ jobs:
      - name: My first step
        uses: ./.github/actions
        with:
-        pokemon_id: 12
+        who-to-greet: IVAN
 
 
 # on: [push]

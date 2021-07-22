@@ -1,14 +1,12 @@
-# action.yaml
-name: 'Blog Custom Github Action'
-description: 'Call an API and get the result'
+name: 'Hello World'
+description: 'Greet someone'
 inputs:
-  pokemon_id:
-    description: 'number of the pokemon in the pokedex'
+  who-to-greet:  # id of input
+    description: 'Who to greet'
     required: true
-    default: 1
+    default: 'World'
 
-jobs:
-  printInputs:
-    runs-on: ubuntu-latest
-    steps:
-    - run: echo "Log level: ${{ inputs.pokemon_id }}"
+runs:
+  using: "composite"
+  steps:
+    - run: echo Hello ${{ inputs.who-to-greet }}.
