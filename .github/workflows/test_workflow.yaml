@@ -8,7 +8,7 @@ jobs:
      - uses: actions/checkout@v1
      - name: My first step
        uses: ./.github/actions
-      with:
+       with:
         pokemon_id: 12
 
 
