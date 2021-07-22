@@ -7,7 +7,7 @@ jobs:
      steps: 
      - uses: actions/checkout@v1
      - name: My first step
-       uses: ./.github/actions/action
+       uses: ./.github/actions
 
 # on: [push]
 
