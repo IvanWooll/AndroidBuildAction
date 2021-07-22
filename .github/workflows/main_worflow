@@ -1,16 +1,14 @@
-# action.yaml
-name: "Blog Custom Github Action"
-description: "Call an API and get the result"
-inputs:
-  pokemon_id:
-    description: "number of the pokemon in the pokedex"
-    required: true
-    default: 1
-outputs:
-  pokemon_name:
-    description: "Name des Pokemons"
-runs:
-  using: "docker"
-  image: "Dockerfile"
-  args:
-    - ${{ inputs.pokemon_id}}
+on: [push]
+
+jobs:
+  custom_test:
+    runs-on: ubuntu-latest
+    name: We test it locally with act
+    steps:
+      - name: Get Pokemon name
+        uses: philschmid/blog-custom-github-action@master
+        id: pokemon
+        with:
+          pokemon_id: 150
+      - name: Get the pokemon
+        run: echo "${{ steps.pokemon.outputs.pokemon_name }} attack"
