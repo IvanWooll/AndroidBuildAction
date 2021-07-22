@@ -7,7 +7,9 @@ inputs:
     required: true
     default: 1
 
-runs-on: ubuntu-latest
-  steps:
-    - run: |
-      echo "Env: ${{ inputs.task_name}}"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Env: ${{ inputs.pokemon_id}}"
